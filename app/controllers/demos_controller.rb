@@ -17,6 +17,20 @@ end
 def show
   @demo = Demo.find(params[:id])
 end
+
+def edit
+  @demo = Demo.find(params[:id])
+end
+
+def update
+  @demo = Demo.find(params[:id])
+  if @demo.update(demo_params)
+    flash[:notice] = "Demo was successfully updated"
+    redirect_to demo_path(@demo)
+  else
+    render 'edit'
+  end
+end
 private
 
   def demo_params
