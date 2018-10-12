@@ -1,0 +1,21 @@
+<h1>Listing all Demos</h1>
+
+<p>
+<%= link_to "create a Demo" , new_demo_path %>
+</p>
+<table>
+
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+<% @demos.each do |demo| %>
+  <tr>
+      <td><%= demo.name %></td>
+      <td><%= demo.description %></td>
+      <td><%= link_to "Edit" , edit_demo_path(demo) %></td>
+      <td><%= link_to "Show" , demo_path(demo) %></td>
+  </tr>
+<% end %>
+</table>

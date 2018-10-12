@@ -30,6 +30,9 @@ def update
   else
     render 'edit'
   end
+  def index
+    @demos = Demo.all
+  end
 end
 private
 
