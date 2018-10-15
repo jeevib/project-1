@@ -6,3 +6,4 @@ class CreateProject1s < ActiveRecord::Migration[5.2]
     end
   end
 end
+ 

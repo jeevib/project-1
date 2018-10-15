@@ -21,15 +21,16 @@ end
 def edit
 end
 
+def index
+  @demos = Demo.all
+end
+
 def update
   if @demo.update(demo_params)
     flash[:notice] = "Demo was successfully updated"
     redirect_to demo_path(@demo)
   else
     render 'edit'
-  end
-  def index
-    @demos = Demo.all
   end
 end
 

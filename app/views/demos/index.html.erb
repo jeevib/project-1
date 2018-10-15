@@ -9,15 +9,15 @@
     <th>Name</th>
     <th>Description</th>
   </tr>
-  <tr>
-<% @demos.each do |demo| %>
-  <tr>
-      <td><%= demo.name %></td>
-      <td><%= demo.description %></td>
-      <td><%= link_to "Edit" , edit_demo_path(demo) %></td>
-      <td><%= link_to "Show" , demo_path(demo) %></td>
-      <td><%= link_to 'delete', demo_path(demo), method: :delete, data: { confirm: "Are you sure?"} %></td>
 
-  </tr>
-<% end %>
+  <% @demos.each do |demo| %>
+    <tr>
+        <td><%= demo.name %></td>
+        <td><%= demo.description %></td>
+        <td><%= link_to "Edit" , edit_demo_path(demo) %></td>
+        <td><%= link_to "Show" , demo_path(demo) %></td>
+        <td><%= link_to 'delete', demo_path(demo), method: :delete, data: { confirm: "Are you sure?"} %></td>
+    </tr>
+  <% end %>
+
 </table>
